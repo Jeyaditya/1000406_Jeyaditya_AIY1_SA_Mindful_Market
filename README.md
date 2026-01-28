@@ -109,6 +109,6 @@ This threshold can be adjusted in the code for future refinements.
 ---
 
 ## Credits
-Student name- Jeyaditya
-CRS facilitator- Syed Ali Beema S
-School name- Jain Vidyalaya
+* Student name- Jeyaditya
+* CRS facilitator- Syed Ali Beema S
+* School name- Jain Vidyalaya IB World School
