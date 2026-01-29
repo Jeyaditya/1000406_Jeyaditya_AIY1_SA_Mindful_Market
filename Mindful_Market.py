@@ -144,33 +144,24 @@ with main:
         else:
             st.info("No purchases yet.")
 
-# ----------- ECO SCORE CALCULATION ----------- #
-eco_score = 100  # start clean and optimistic
+# ================= ECO SCORE =================
+eco_score = 100
+eco_count = 0
 
 for p in st.session_state.purchases:
-    # Base penalty per purchase
-    eco_score -= 8
-
-    # High CO₂ impact penalty
-    if not p.get("Eco", False):
-        eco_score -= 12
+    if p["Eco"]:
+        eco_score += 12
+        eco_count += 1
     else:
-        eco_score += 4  # reward good choice
+        eco_score -= 8
 
-    # Price-based adjustment
-    if p.get("Price", 0) <= 2000:
-        eco_score += 3
-    else:
-        eco_score -= 3
+    if p["Price"] <= 2000:
+        eco_score += 4
+    if p["Distance"] <= 3000:
+        eco_score += 4
 
-    # Distance-based adjustment
-    if p.get("Distance", 0) <= 3000:
-        eco_score += 3
-    else:
-        eco_score -= 5
-
-# Clamp score safely between 0 and 100
 eco_score = max(0, min(eco_score, 100))
+
 
 # ================= BADGES =================
 badges = []
@@ -243,4 +234,5 @@ with right:
             st.write("Great choice. Keep it up.")
     else:
         st.write("Add purchases to receive personalized suggestions.")
+
 
