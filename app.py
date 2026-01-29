@@ -59,9 +59,9 @@ tab = st.sidebar.radio("", ["Home", "Purchase History"])
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("### Eco Badges")
-st.sidebar.write("Eco Starter")
-st.sidebar.write("Conscious Buyer")
-st.sidebar.write("Climate Hero")
+st.sidebar.write("🌵 Eco Starter")
+st.sidebar.write("🛒 Conscious Buyer")
+st.sidebar.write("😎 Climate Hero")
 
 # ----------- ECO SCORE CALCULATION ----------- #
 if not st.session_state.purchases:
@@ -237,3 +237,4 @@ with main:
                 st.experimental_rerun()
         else:
             st.info("No purchases yet.")
+
