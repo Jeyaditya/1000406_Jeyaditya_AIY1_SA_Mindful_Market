@@ -10,7 +10,7 @@ The goal of this project is not to provide exact scientific measurements, but to
 
 ---
 
-[Link to access Mindful Market](https://1000406jeyadityaaiy1samindfulmarket.streamlit.app/))
+[Link to access Mindful Market](https://1000406jeyadityaaiy1samindfulmarket.streamlit.app/)
 
 ## Purpose of the Project
 
